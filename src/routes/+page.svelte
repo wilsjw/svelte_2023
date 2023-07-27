@@ -1,3 +1,22 @@
+<style lang="js">
+    h1 {
+        color: maroon;
+    }
+
+    img#cyberpunk {
+        width: 480px;
+    }
+
+    img#cyberpunk:hover {
+        width: 720px;
+        transition: ease-in width 0.2s;
+    }
+
+    img#cyberpunk {
+        width: 480px;
+    }
+</style>
+
 <h1>John Wilson Best Cool Website</h1>
 <h2>only the best are welcome</h2>
 
