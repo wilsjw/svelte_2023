@@ -1,8 +1,3 @@
-<script>
-    /** @type {import('./$types').PageData} */
-    export let data;
-</script>
-
 <style>
     .background {
         height: 100%;
