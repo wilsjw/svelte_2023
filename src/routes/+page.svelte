@@ -15,21 +15,27 @@
     }
 
     .main {
-        padding: 0 1rem;
+        padding: 3rem 4rem;
     }
 
-    h1 {
-        color: maroon;
+    #top h1 {
+        color: pink;
+        transition: ease-out .3s;
+    }
+
+    #top h1:hover {
+        color: cyan;
+        transition: ease-in .3s;
     }
 
     img#cyberpunk {
         width: 480px;
-        transition: ease-out width 0.5s;
+        transition: cubic-bezier(0.215, 0.610, 0.355, 1) width 0.5s;
     }
 
     img#cyberpunk:hover {
         width: 720px;
-        transition: ease-in width 0.5s;
+        transition: cubic-bezier(0.215, 0.610, 0.355, 1) width 0.5s;
     }
 
     img#cyberpunk {
@@ -42,9 +48,17 @@
         display: flex;
     }
 
+    .socials a {
+        color: red;
+    }
+
     .socials a:visited {
         margin: 0;
         text-decoration: none;
+    }
+
+    .socials a:hover {
+        color: maroon; 
     }
 
     .socials img {
@@ -55,53 +69,57 @@
 
 <div class="background">
     <div class="main">
-        <h1>John Wilson Best Cool Website</h1>
-        <h2>only the best are welcome</h2>
+        <div id="top">
+            <h1>John Wilson Best Cool Website</h1>
+            <h2>only the best are welcome</h2>
+    
+            <p>you are not</p>
 
-        <p>you are not</p>
+            <audio autoplay loop>
+                <source src="audio/ffxiv.mp3">
+            </audio>
+        </div>
 
-        <br>
-        <hr>
+        <div id="centre">
+            <h3>To-do:</h3>
+            <ol>
+                <li>become cool</li>
+                <li>get money</li>
+                <li>swagger</li>
+            </ol>
 
-        <h3>To-do:</h3>
-        <ol>
-            <li>become cool</li>
-            <li>get money</li>
-            <li>swagger</li>
-        </ol>
-
-        <br>
-        <hr>
-
-        <h2>Welcome</h2>
-        <img id="cyberpunk" alt="Favourite game right now" src="images/cyberpunk.jpg">
-
-        <ul class="socials">
-            <li id="yt">
-                <img id="yt-icon" alt="YT icon" src="images/youtube.png">
-                <a href="https://www.youtube.com/@ashures_" target="_blank">
-                    <p>YouTube</p>
-                </a>
-            </li>
-            <li id="twitter">
-                <img id="yt-icon" alt="YT icon" src="images/youtube.png">
-                <a href="https://www.twitter.com/ashures_" target="_blank">
-                    <p>Twitter</p>
-                </a>
-            </li>
-            <li id="twitch">
-                <img id="yt-icon" alt="YT icon" src="images/youtube.png">
-                <a href="https://www.twitch.com/ashuress" target="_blank">
-                    <p>Twitch</p>
-                </a>
-            </li>
-            <li id="games">
-                <img id="yt-icon" alt="YT icon" src="images/youtube.png">
-                <a href="https://ashures.w3spaces.com/" target="_blank">
-                    <p>Games</p>
-                </a>
-            </li>
-        </ul>
+            <h2>Welcome</h2>
+            <img id="cyberpunk" alt="Favourite game right now" src="images/cyberpunk.jpg">
+        </div>
+        
+        <div id="bottom">
+            <ul class="socials">
+                <li id="yt">
+                    <img id="yt-icon" alt="YT icon" src="images/youtube.png">
+                    <a href="https://www.youtube.com/@ashures_" target="_blank">
+                        <p>YouTube</p>
+                    </a>
+                </li>
+                <li id="twitter">
+                    <img id="yt-icon" alt="YT icon" src="images/youtube.png">
+                    <a href="https://www.twitter.com/ashures_" target="_blank">
+                        <p>Twitter</p>
+                    </a>
+                </li>
+                <li id="twitch">
+                    <img id="yt-icon" alt="YT icon" src="images/youtube.png">
+                    <a href="https://www.twitch.com/ashuress" target="_blank">
+                        <p>Twitch</p>
+                    </a>
+                </li>
+                <li id="games">
+                    <img id="yt-icon" alt="YT icon" src="images/youtube.png">
+                    <a href="https://ashures.w3spaces.com/" target="_blank">
+                        <p>Games</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 
