@@ -3,7 +3,7 @@
     export let data;
 </script>
 
-<style>
+<style lang="js">
     h1 {
         color: maroon;
     }
