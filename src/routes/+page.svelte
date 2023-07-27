@@ -1,3 +1,8 @@
+<script>
+    /** @type {import('./$types').PageData} */
+    export let data;
+</script>
+
 <style lang="js">
     h1 {
         color: maroon;
