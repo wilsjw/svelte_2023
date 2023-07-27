@@ -16,5 +16,6 @@
 <br>
 <hr>
 
-<h2>Welcome back</h2>
+<h2>Welcome</h2>
+<img id="cyberpunk" alt="Favourite game right now" src="images/cyberpunk.jpg">
 <p><a href="https://www.youtube.com/@ashures_" target="_blank"><img alt="YT icon" src="images/youtube.png" width="24">@Ashures on YouTube</a></p>
