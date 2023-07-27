@@ -3,19 +3,19 @@
     export let data;
 </script>
 
-<style lang="js">
+<style>
     h1 {
         color: maroon;
     }
 
     img#cyberpunk {
         width: 480px;
-        transition: ease-out width 0.1s;
+        transition: ease-out width 0.5s;
     }
 
     img#cyberpunk:hover {
         width: 720px;
-        transition: ease-in width 0.1s;
+        transition: ease-in width 0.5s;
     }
 
     img#cyberpunk {
@@ -71,6 +71,18 @@
         <img id="yt-icon" alt="YT icon" src="images/youtube.png">
         <a href="https://www.twitter.com/ashures_" target="_blank">
             <p>Twitter</p>
+        </a>
+    </li>
+    <li id="twitch">
+        <img id="yt-icon" alt="YT icon" src="images/youtube.png">
+        <a href="https://www.twitch.com/ashuress" target="_blank">
+            <p>Twitch</p>
+        </a>
+    </li>
+    <li id="games">
+        <img id="yt-icon" alt="YT icon" src="images/youtube.png">
+        <a href="https://ashures.w3spaces.com/" target="_blank">
+            <p>Games</p>
         </a>
     </li>
 </ul>
