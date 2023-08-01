@@ -1,70 +1,8 @@
-<style>
-    .background {
-        height: 100%;
-        width: 100.1%;
-        transform: translate(-0.5%, -0.8%);
-        background-image: url("images/background.jpg");
-        background-repeat: no-repeat;
-        background-size: contain;
-        position: absolute;
-    }
-
-    .main {
-        padding: 3rem 4rem;
-    }
-
-    #top h1 {
-        color: pink;
-        transition: ease-out .3s;
-    }
-
-    #top h1:hover {
-        color: cyan;
-        transition: ease-in .3s;
-    }
-
-    img#cyberpunk {
-        width: 480px;
-        transition: cubic-bezier(0.215, 0.610, 0.355, 1) width 0.5s;
-    }
-
-    img#cyberpunk:hover {
-        width: 720px;
-        transition: cubic-bezier(0.215, 0.610, 0.355, 1) width 0.5s;
-    }
-
-    img#cyberpunk {
-        width: 480px;
-    }
-
-    .socials * {
-        margin: 0 0 0.2rem 0.4rem;
-        text-decoration: none;
-        display: flex;
-    }
-
-    .socials a {
-        color: red;
-    }
-
-    .socials a:visited {
-        margin: 0;
-        text-decoration: none;
-    }
-
-    .socials a:hover {
-        color: maroon; 
-    }
-
-    .socials img {
-        width: 36px;
-        margin: -0.6rem 0 0 -2rem;
-    }
-</style>
-
 <script>
     import Header from '$lib/Header.svelte';
 </script>
+
+<link rel="stylesheet" href="css/main.css">
 
 <div class="background">
     <Header />

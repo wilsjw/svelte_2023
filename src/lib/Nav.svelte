@@ -14,9 +14,9 @@
 </style>
 
 <nav>
-    <a href="ashures.w3spaces.com">Page 1</a>
-    <a href="ashures.w3spaces.com">Page 2</a>
-    <a href="ashures.w3spaces.com">Page 3</a>
-    <a href="ashures.w3spaces.com">Page 4</a>
-    <a href="ashures.w3spaces.com">Page 5</a>
+    <a href="about">About Me</a>
+    <a href="lying">Page 2</a>
+    <a href="liar">Page 3</a>
+    <a href="lied">Page 4</a>
+    <a href="lies">Page 5</a>
 </nav>
