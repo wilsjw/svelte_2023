@@ -1,5 +1,6 @@
 <script>
     import { page } from '$app/stores';
+    import Header from '$lib/Nav.svelte';
 </script>
 
 <style>
@@ -15,5 +16,5 @@
 </style>
 
 <div id="background">
-
+    <Header />
 </div>
