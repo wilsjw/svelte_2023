@@ -62,7 +62,12 @@
     }
 </style>
 
+<script>
+    import Header from '$lib/Header.svelte';
+</script>
+
 <div class="background">
+    <Header />
     <div class="main">
         <div id="top">
             <h1>John Wilson Best Cool Website</h1>
