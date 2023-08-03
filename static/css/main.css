@@ -1,4 +1,6 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+
+* {
     box-sizing: border-box;
 }
 
@@ -7,12 +9,36 @@ body {
 }
 
 .background {
-    height: 100%;
+    position:relative;
+    height: 100vh;
     width: 100%;    
     background-image: url("../images/background.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    background-color: pink;
+    padding: 2rem 4rem;
+}
+
+nav #links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav a {
+    padding: 0 4rem;
+    text-decoration: none;
+    color: black;
 }
 
 .main {
@@ -38,12 +64,18 @@ img#cyberpunk {
 }
 
 img#cyberpunk:hover {
-    width: 720px;
+    width: 1080px;
     transition: cubic-bezier(0.215, 0.610, 0.355, 1) width 0.5s;
 }
 
 img#cyberpunk {
     width: 480px;
+}
+
+#title h1 {
+    position: absolute;
+    font-size: 8rem;
+    color: black;
 }
 
 .socials * {
@@ -69,4 +101,9 @@ img#cyberpunk {
     width: 2rem;
     height: 2rem;
     margin: -0.2rem 0 0 -2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0; 
 }

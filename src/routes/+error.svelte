@@ -1,20 +1,18 @@
-<script>
-    import { page } from '$app/stores';
-    import Header from '$lib/Nav.svelte';
-</script>
-
 <style>
+    * {
+        box-sizing: border-box;
+    }
+    
     #background {
-        height: 100.2%;
-        width: 100.6%;
+        height: 100vh;
+        width: 100%;
         background-image: url("images/error/background.jpg");
         background-repeat: no-repeat;
-        background-size: cover;
-        position: absolute;
-        transform: translate(-1%, -1%);
+        background-size: contain;
+        background-position: center;
     }
 </style>
 
 <div id="background">
-    <Header />
+
 </div>

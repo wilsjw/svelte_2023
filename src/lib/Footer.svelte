@@ -1,7 +1,9 @@
 <footer>
     <p>
         <i>
-            © John Wilson 2023
+            <b>
+                © John Wilson 2023
+            </b>
         </i>
     </p>
 </footer>
