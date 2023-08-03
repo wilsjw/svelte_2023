@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    position: absolute;
+    position: relative;
     width: 100%;
 }
 
@@ -27,6 +27,7 @@ nav {
     width: 100%;
     background-color: pink;
     padding: 2rem 4rem;
+    height: 5rem;
 }
 
 nav #links {
@@ -39,6 +40,7 @@ nav a {
     padding: 0 4rem;
     text-decoration: none;
     color: black;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .main {
@@ -48,7 +50,7 @@ nav a {
     align-items: center;
 }
 
-#top h1 {
+h1 {
     color: pink;
     transition: ease-out .3s;
 }
