@@ -6,16 +6,7 @@
 
 body {
     margin: 0;
-}
-
-.background {
-    position:relative;
-    height: 100vh;
-    width: 100%;    
-    background-image: url("../images/background.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: right;
+    background-color: #FAFAFA;
 }
 
 header {
@@ -25,9 +16,8 @@ header {
 
 nav {
     width: 100%;
-    background-color: pink;
-    padding: 2rem 4rem;
-    height: 5rem;
+    padding: 2vh 4vh;
+    height: 5vh;
 }
 
 nav #links {
@@ -37,10 +27,11 @@ nav #links {
 }
 
 nav a {
-    padding: 0 4rem;
+    padding: 0 6vh;
     text-decoration: none;
     color: black;
     font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.8vh;
 }
 
 .main {
@@ -50,53 +41,67 @@ nav a {
     align-items: center;
 }
 
-h1 {
-    color: pink;
+#top h1 {
+    font-size: 35vh;
+}
+
+#top #index-title h1 {
+    color: #FFE255;
     transition: ease-out .3s;
 }
 
-#top h1:hover {
-    color: cyan;
+#top #index-title h1:hover {
+    color: #FF9F55;
     transition: ease-in .3s;
 }
 
-img#cyberpunk {
-    width: 480px;
-    transition: cubic-bezier(0.215, 0.610, 0.355, 1) width 0.5s;
+#top {
+    text-align: center;
+    display: inline-block;
 }
 
-img#cyberpunk:hover {
-    width: 1080px;
-    transition: cubic-bezier(0.215, 0.610, 0.355, 1) width 0.5s;
+#centre {
+    padding: 5vh;
 }
 
-img#cyberpunk {
-    width: 480px;
+#centre h2 {
+    font-size: 10vh;
+    text-align: center;
 }
 
-#title h1 {
-    position: absolute;
-    font-size: 8rem;
-    color: black;
+#centre table {
+    border-spacing: .4vh;
+}
+
+#centre table tr {
+    height: 30vh;
+    background-color: #FF7155;
+}
+
+#centre table th {
+    width: 30vh;
+    height: 30vh;
+}
+
+#centre table th img {
+    height: 95%;
 }
 
 .socials * {
     margin: 0 0 0.2rem 0.4rem;
     text-decoration: none;
     display: flex;
+    flex-direction: row;
 }
 
 .socials a {
-    color: pink;
+    color: black;
+    font-family: 'Nanum Gothic', sans-serif;
 }
 
 .socials a:visited {
     margin: 0;
     text-decoration: none;
-}
-
-.socials a:hover {
-    color: red;
 }
 
 .socials img {
@@ -106,6 +111,7 @@ img#cyberpunk {
 }
 
 footer {
-    position: absolute;
-    bottom: 0; 
+    position: fixed;
+    justify-content: end;
+    display: block;
 }
