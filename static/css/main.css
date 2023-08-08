@@ -50,9 +50,6 @@ nav a {
 
 #top h1 {
     font-size: 35vh;
-}
-
-#top #index-title h1 {
     color: #FFFFFF;
     transition: ease-out .3s;
 }
@@ -117,8 +114,8 @@ nav a {
 }
 
 footer {
-    position: fixed;
-    justify-content: end;
-    display: block;
-    color: #FF9F55;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
