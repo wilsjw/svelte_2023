@@ -5,7 +5,7 @@
 
 <svelte:head>
     <link rel="stylesheet" href="css/main.css">
-    <title>Pokémon - Made by John</title>
+    <title>Pokémon</title>
 </svelte:head>
 
 <Header />
