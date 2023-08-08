@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nanum+Gothic&display=swap');
 
 * {
     box-sizing: border-box;
@@ -15,6 +15,7 @@ header {
 }
 
 nav {
+    background-color: #FFE255;
     width: 100%;
     padding: 2vh 4vh;
     height: 5vh;
@@ -41,18 +42,19 @@ nav a {
     align-items: center;
 }
 
+#top {
+    width: 100%;
+    height: 100vh;
+    background-color: #FFE255;
+}
+
 #top h1 {
     font-size: 35vh;
 }
 
 #top #index-title h1 {
-    color: #FFE255;
+    color: #FFFFFF;
     transition: ease-out .3s;
-}
-
-#top #index-title h1:hover {
-    color: #FF9F55;
-    transition: ease-in .3s;
 }
 
 #top {
@@ -65,12 +67,14 @@ nav a {
 }
 
 #centre h2 {
-    font-size: 10vh;
+    font-size: 8vh;
     text-align: center;
+    margin-bottom: 1vh;
+    font-family: 'Lora', serif;
 }
 
 #centre table {
-    border-spacing: .4vh;
+    border-spacing: .2vh;
 }
 
 #centre table tr {
@@ -84,7 +88,9 @@ nav a {
 }
 
 #centre table th img {
-    height: 95%;
+    height: 90%;
+    padding: 0.5vh;
+    background-color: #FFFFFF;
 }
 
 .socials * {
@@ -114,4 +120,5 @@ footer {
     position: fixed;
     justify-content: end;
     display: block;
+    color: #FF9F55;
 }
