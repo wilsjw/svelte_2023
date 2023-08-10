@@ -76,7 +76,14 @@ nav a {
 
 #centre table tr {
     height: 30vh;
+}
+
+#centre table > tr:nth-of-type(odd) {
     background-color: #FF7155;
+}
+
+#centre table > tr:nth-of-type(even) {
+    background-color: #f15045;
 }
 
 #centre table th {
