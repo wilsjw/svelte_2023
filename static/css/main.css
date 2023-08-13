@@ -94,9 +94,12 @@ nav a {
     background-color: rgba(0, 0, 0, 0);
     border: none;
     color: #FFF;
+    transition: 50ms;
 }
 
-#image-overlay #close-button:hover {
+#image-overlay #close-button:hover,
+#image-overlay #close-button:focus {
+    font-size: 2.5rem;
     color: #F00;
 }
 
