@@ -10,7 +10,8 @@ body {
 }
 
 header {
-    position: relative;
+    position: fixed;
+    top: 0;
     width: 100%;
 }
 
@@ -32,11 +33,21 @@ nav #links {
 }
 
 nav a {
-    padding: 0 6vh;
+    margin: 0 6vh;
     text-decoration: none;
     color: black;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.8vh;
+}
+
+.fancy-underline {
+    text-decoration: underline 0.3vh rgba(0, 0, 0, 0);
+    transition: 200ms;
+}
+
+.fancy-underline:hover,
+.fancy-underline:focus {
+    text-decoration: underline 0.3vh black;
 }
 
 .main {
@@ -44,6 +55,49 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#image-overlay {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#image-overlay #main img#focus-image {
+    width: 65vh;
+    height: 65vh;
+    transform: translate(calc(50vw - 32.5vh), calc(45vh - 32.5vh));
+    margin-bottom: 1vh;
+    padding: 1vh;
+    background-color: #FFF;
+    border: solid #F15045 1vh;
+}
+
+#image-overlay #main p#focus-title {
+    font: 7rem 'Mukta', sans-serif;
+    color: #FFF;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+#image-overlay #close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 50px;
+    height: 50px;
+    font: bold 2rem 'Arial', 'Helvetica', sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #FFF;
+}
+
+#image-overlay #close-button:hover {
+    color: #F00;
 }
 
 #top {
@@ -57,6 +111,7 @@ nav a {
 }
 
 #top h1 {
+    width: auto;
     font: 35vh 'Mukta', sans-serif;
     text-transform: uppercase;
     color: #FFFFFF;
