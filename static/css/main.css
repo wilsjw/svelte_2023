@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Mukta&family=Nanum+Gothic&display=swap');
 
 * {
     box-sizing: border-box;
@@ -18,7 +18,10 @@ nav {
     background-color: #FFE255;
     width: 100%;
     padding: 2vh 4vh;
-    height: 5vh;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 nav #links {
@@ -49,17 +52,16 @@ nav a {
 }
 
 #top h1 {
-    font-size: 35vh;
-}
-
-#top #index-title h1 {
+    font: 35vh 'Mukta', sans-serif;
+    text-transform: uppercase;
     color: #FFFFFF;
-    transition: ease-out .3s;
 }
 
 #top {
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #centre {
