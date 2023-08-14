@@ -10,9 +10,9 @@
         focusTitle = targetImgElement.id;
         overlay.style.display = "block";
 
-        // focusImageElement.src = targetImgElement.src;
+        console.log(event);
         
-    };
+    }
 
     function closeOverlay() {
         let overlay = document.getElementById("image-overlay");

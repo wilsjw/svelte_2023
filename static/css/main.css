@@ -40,16 +40,6 @@ nav a {
     font-size: 1.8vh;
 }
 
-.fancy-underline {
-    text-decoration: underline 0.3vh rgba(0, 0, 0, 0);
-    transition: 200ms;
-}
-
-.fancy-underline:hover,
-.fancy-underline:focus {
-    text-decoration: underline 0.3vh black;
-}
-
 .main {
     padding: 0;
     display: flex;
@@ -181,4 +171,14 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.fancy-underline {
+    text-decoration: underline 0.3vh rgba(0, 0, 0, 0);
+    transition: 200ms;
+}
+
+.fancy-underline:hover,
+.fancy-underline:focus {
+    text-decoration: underline 0.3vh black;
 }
