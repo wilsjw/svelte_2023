@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    position: fixed;
+    position: absolute;
     top: 0;
     width: 100%;
 }
@@ -121,31 +121,24 @@ nav a {
     font-family: 'Lora', serif;
 }
 
-#centre table {
-    border-spacing: .2vh;
+#centre .pokemon-grid {
+    display: grid;
+    grid-template-columns: 30.5vh 30.5vh 30.5vh 30.5vh;
 }
 
-#centre table tr {
+#centre .pokemon-grid img {
     height: 30vh;
-}
-
-#centre table > tr:nth-of-type(odd) {
-    background-color: #FF7155;
-}
-
-#centre table > tr:nth-of-type(even) {
-    background-color: #F15045;
-}
-
-#centre table th {
     width: 30vh;
-    height: 30vh;
+    margin: 0.25vh;
+    background-color: #FFF;
 }
 
-#centre table th img {
-    height: 90%;
-    padding: 0.5vh;
-    background-color: #FFFFFF;
+#centre .pokemon-grid > img:nth-of-type(odd) {
+    border: solid 1.5vh #FF7155;
+}
+
+#centre .pokemon-grid > img:nth-of-type(even) {
+    border: solid 1.5vh #F15045;
 }
 
 .socials * {
