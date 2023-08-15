@@ -123,14 +123,15 @@ nav a {
 
 #centre .pokemon-grid {
     display: grid;
-    grid-template-columns: 30.5vh 30.5vh 30.5vh 30.5vh;
+    grid-template-columns: 32.5vh 32.5vh 32.5vh 32.5vh;
 }
 
 #centre .pokemon-grid img {
-    height: 30vh;
-    width: 30vh;
+    height: 32vh;
+    width: 32vh;
     margin: 0.25vh;
     background-color: #FFF;
+    padding: 1vh;
 }
 
 #centre .pokemon-grid > img:nth-of-type(odd) {
