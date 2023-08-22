@@ -1,8 +1,27 @@
 <script>
+  import { onMount } from "svelte";
     import PokemonList from "../lib/PokemonList.svelte";
 
     let focusImage = "images/home/mew.jpg";
     let focusTitle = "mew";
+
+    let pokemon = [];
+    let currentUrl = "https://pokeapi.co/api/v2/pokemon";
+    let prevUrl = "";
+    let nextUrl = "";
+    let totalPokemon = 0;
+
+    onMount(async () => {
+        fetch(currentUrl)
+        .then(response => response.json())
+        .then(data => {
+            pokemon = data.results;
+            nextUrl = data.next;
+            prevUrl = data.previous;
+            totalPokemon = data.count;
+        })
+        .catch(error => console.log(error));
+    });
 
     function imageClick(event) {
         let targetImgElement = document.getElementById(event.srcElement.id);
