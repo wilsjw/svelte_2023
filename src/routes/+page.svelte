@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from "svelte";
+    import { onMount } from "svelte";
     import PokemonList from "../lib/PokemonList.svelte";
 
     let focusImage = "images/home/mew.jpg";
@@ -15,7 +15,7 @@
         fetch(currentUrl)
         .then(response => response.json())
         .then(data => {
-            pokemon = data.results;
+            pokemon = data.results.map(p => p.name);
             nextUrl = data.next;
             prevUrl = data.previous;
             totalPokemon = data.count;
@@ -40,6 +40,18 @@
 
         overlay.style.display = "none";
     }
+
+    async function updatePokemon(urlToUse) {
+        fetch(urlToUse)
+        .then(response => response.json())
+        .then(data => {
+            pokemon = data.results.map(p => p.name);
+            nextUrl = data.next;
+            prevUrl = data.previous;
+            totalPokemon = data.count;
+        })
+        .catch(error => console.log(error));
+    }
 </script>
 
 <div class="main">
@@ -59,7 +71,11 @@
         </div>
 
         <h2>All Pokémon. Ever.</h2>
-        <PokemonList />
+        <div id="change-pokemon">
+            <button on:click={() => updatePokemon(prevUrl)} id="prev-pokemon">{"<"}</button>
+            <button on:click={() => updatePokemon(nextUrl)} id="next-pokemon">{">"}</button>
+        </div>
+        <PokemonList pokemon={pokemon} />
     </div>
     
     <div id="bottom">

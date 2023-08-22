@@ -117,21 +117,42 @@ nav a {
 #centre h2 {
     font-size: 8vh;
     text-align: center;
-    margin-bottom: 1vh;
+    margin-bottom: 0;
     font-family: 'Lora', serif;
+}
+
+#change-pokemon {
+    display: flex;
+    justify-content: center;
+    gap: 25vh;
+    padding: 3vh 0;
+}
+
+#centre #change-pokemon button {
+    font: bold 4vh 'Arial', sans-serif;
+    width: 5vh;
+    height: 5vh;
+    background-color: #a81b1b;
+    border-radius: 1vh;
+    border: none;
+    transition: 100ms;
+}
+
+#centre #change-pokemon button:hover {
+    background-color: #F15045;
+    border-radius: 50%;
 }
 
 #centre .pokemon-grid {
     display: grid;
     grid-template-columns: 30.5vh 30.5vh 30.5vh 30.5vh;
+    gap: 0.8vh;
 }
 
 #centre .pokemon-grid img {
     height: 30vh;
     width: 30vh;
-    margin: 0.25vh;
     background-color: #FFF;
-    padding: 1vh;
 }
 
 #centre .pokemon-grid > img:nth-of-type(odd) {
