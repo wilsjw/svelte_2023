@@ -148,17 +148,24 @@ nav a {
     gap: 0.8vh;
 }
 
-#centre .pokemon-grid img {
-    height: 30vh;
-    width: 30vh;
+#centre .pokemon-grid .card {
+    display: grid;
+    width: 30.5vh;
+    height: 30.5vh;
     background-color: #FFF;
+    padding: 1vh;
 }
 
-#centre .pokemon-grid > img:nth-of-type(odd) {
+#centre .pokemon-grid img {
+    margin: auto;
+    max-width: 100%;
+}
+
+#centre .pokemon-grid > .card:nth-of-type(odd) {
     border: solid 1.5vh #FF7155;
 }
 
-#centre .pokemon-grid > img:nth-of-type(even) {
+#centre .pokemon-grid > .card:nth-of-type(even) {
     border: solid 1.5vh #F15045;
 }
 

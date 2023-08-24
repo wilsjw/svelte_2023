@@ -7,6 +7,13 @@
 
 <div class="pokemon-grid">
     {#each pokemon as poke}
-        <img on:click={event => clickPokemon(event)} src={spriteUrl + poke + spriteFileType} alt={poke} id={poke}>
+        <div class="card">
+            <img
+                on:click={event => clickPokemon(event)} 
+                src={spriteUrl + poke + spriteFileType} 
+                alt={poke} 
+                id={poke}
+            >
+        </div>
     {/each}
 </div>
