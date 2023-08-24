@@ -31,8 +31,6 @@
         focusTitle = targetImgElement.id;
         overlay.style.display = "block";
 
-        console.log(event);
-        
     }
 
     function closeOverlay() {
@@ -75,7 +73,7 @@
             <button on:click={() => updatePokemon(prevUrl)} id="prev-pokemon">{"<"}</button>
             <button on:click={() => updatePokemon(nextUrl)} id="next-pokemon">{">"}</button>
         </div>
-        <PokemonList pokemon={pokemon} />
+        <PokemonList pokemon={pokemon} clickPokemon={imageClick} />
     </div>
     
     <div id="bottom">
