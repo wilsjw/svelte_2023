@@ -12,7 +12,7 @@
     let totalPokemon = 0;
 
     onMount(async () => {
-        fetch(currentUrl)
+        await fetch(currentUrl)
         .then(response => response.json())
         .then(data => {
             pokemon = data.results.map(p => p.name);
@@ -40,15 +40,15 @@
     }
 
     async function updatePokemon(urlToUse) {
-        fetch(urlToUse)
-        .then(response => response.json())
-        .then(data => {
-            pokemon = data.results.map(p => p.name);
-            nextUrl = data.next;
-            prevUrl = data.previous;
-            totalPokemon = data.count;
-        })
-        .catch(error => console.log(error));
+        await fetch(urlToUse)
+            .then(response => response.json())
+            .then(data => {
+                pokemon = data.results.map(p => p.name);
+                nextUrl = data.next;
+                prevUrl = data.previous;
+                totalPokemon = data.count;
+            })
+            .catch(error => console.log(error));
     }
 </script>
 

@@ -15,6 +15,22 @@ header {
     width: 100%;
 }
 
+#menu-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-button svg {
+    width: 40px;
+    height: 40px;
+}
+
 nav {
     background-color: #FFE255;
     width: 100%;
@@ -103,7 +119,7 @@ nav a {
 
 #top h1 {
     width: auto;
-    font: 35vh 'Mukta', sans-serif;
+    font: 25vh 'Mukta', sans-serif;
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 0;
@@ -123,7 +139,7 @@ nav a {
 #change-pokemon {
     display: flex;
     justify-content: center;
-    gap: 25vh;
+    gap: 40px;
     padding: 3vh 0;
 }
 
@@ -144,14 +160,12 @@ nav a {
 
 #centre .pokemon-grid {
     display: grid;
-    grid-template-columns: 30.5vh 30.5vh 30.5vh 30.5vh;
-    gap: 0.8vh;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
 
 #centre .pokemon-grid .card {
     display: grid;
-    width: 30.5vh;
-    height: 30.5vh;
     background-color: #FFF;
     padding: 1vh;
 }
@@ -202,4 +216,34 @@ footer {
 .fancy-underline:hover,
 .fancy-underline:focus {
     text-decoration: underline 0.3vh black;
+}
+
+@media (max-width: 1000px) {
+    #top h1 {
+        font-size: 15vh;
+    }
+}
+
+@media (max-width: 860px) {
+    #top h1 {
+        font-size: 7vh;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+    }
+
+    #centre .pokemon-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #centre h2 {
+        font-size: 6vh;
+    }
+
+    header nav {
+        scale: 0;
+    }
+
+    header #menu-button {
+        display: block;
+    }
 }
