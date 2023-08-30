@@ -23,22 +23,6 @@
         .catch(error => console.log(error));
     });
 
-    function imageClick(event) {
-        let targetImgElement = document.getElementById(event.srcElement.id);
-        let overlay = document.getElementById("image-overlay");
-
-        focusImage = targetImgElement.src;
-        focusTitle = targetImgElement.id;
-        overlay.style.display = "block";
-
-    }
-
-    function closeOverlay() {
-        let overlay = document.getElementById("image-overlay");
-
-        overlay.style.display = "none";
-    }
-
     async function updatePokemon(urlToUse) {
         await fetch(urlToUse)
             .then(response => response.json())
@@ -60,20 +44,12 @@
     </div>
 
     <div id="centre">
-        <div id="image-overlay">
-            <div id="main">
-                <img src={focusImage} alt="" id="focus-image">
-                <p id="focus-title">{focusTitle}</p>
-            </div>
-            <button on:click={closeOverlay} id="close-button">X</button>
-        </div>
-
         <h2>All Pokémon. Ever.</h2>
         <div id="change-pokemon">
             <button on:click={() => updatePokemon(prevUrl)} id="prev-pokemon">{"<"}</button>
             <button on:click={() => updatePokemon(nextUrl)} id="next-pokemon">{">"}</button>
         </div>
-        <PokemonList pokemon={pokemon} clickPokemon={imageClick} />
+        <PokemonList pokemon={pokemon} />
     </div>
     
     <div id="bottom">

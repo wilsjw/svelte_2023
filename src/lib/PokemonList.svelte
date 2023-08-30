@@ -1,19 +1,16 @@
 <script>
     export let pokemon;
-    export let clickPokemon;
+
     let spriteUrl = "https://img.pokemondb.net/artwork/large/"
     let spriteFileType = ".jpg"
 </script>
 
 <div class="pokemon-grid">
-    {#each pokemon as poke}
+    {#each pokemon as p}
         <div class="card">
-            <img
-                on:click={event => clickPokemon(event)} 
-                src={spriteUrl + poke + spriteFileType} 
-                alt={poke} 
-                id={poke}
-            >
+            <a href={`/pokemon/${p}`}>
+                <img src={spriteUrl + p + spriteFileType} alt={p} id={p}>
+            </a>
         </div>
     {/each}
 </div>
