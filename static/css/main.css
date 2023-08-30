@@ -166,11 +166,12 @@ nav a {
 
 #centre .pokemon-grid .card {
     display: grid;
+    place-items: center;
     background-color: #FFF;
     padding: 1vh;
 }
 
-#centre .pokemon-grid img {
+#centre .pokemon-grid .card a img {
     margin: auto;
     max-width: 100%;
 }
