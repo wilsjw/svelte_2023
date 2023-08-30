@@ -184,10 +184,10 @@ nav a {
 }
 
 .socials * {
-    margin: 0 0 0.2rem 0.4rem;
     text-decoration: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .socials a {
@@ -198,7 +198,7 @@ nav a {
 .socials img {
     width: 2rem;
     height: 2rem;
-    margin: -0.2rem 0 0 -2rem;
+    margin-right: 10px;
 }
 
 footer {
@@ -216,6 +216,162 @@ footer {
 .fancy-underline:hover,
 .fancy-underline:focus {
     text-decoration: underline 0.3vh black;
+}
+
+.pokemon-page-main {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    padding: 80px 40px;
+}
+
+.pokemon-page-main p {
+    margin: 0 0 5px;
+    font: 1em sans-serif;
+}
+
+.pokemon-page-main h1,
+.pokemon-page-main h2 {
+    margin: 10px 0 6px;
+}
+
+.pokemon-page-main h1 {
+    font-size: 3em;
+}
+
+.pokemon-page-main h2 {
+    font-size: 2em;
+}
+
+.pokemon-page-main > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemon-page-info img {
+    height: 80%;
+    width: auto;
+}
+
+.pokemon-page-info-text ul {
+    margin: 0 0 5px;
+}
+
+.pokemon-page-stats {
+    flex-direction: column;
+}
+
+.pokemon-page-moves {
+    grid-column: span 2;
+}
+
+.pokemon-page-moves {
+    flex-direction: column;
+}
+
+.pokemon-move-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.pokemon-move {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font: bold 1em sans-serif;
+}
+
+.pokemon-move:nth-of-type(odd) {
+    background-color: orange;
+}
+
+.pokemon-move:nth-of-type(even) {
+    background-color: orangered;
+}
+
+.pokemon-type {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.7);
+    padding: 4px 6px;
+    border-radius: 5px;
+    margin-right: 3px;
+}
+
+.type-normal {
+    background-color: rgb(226, 226, 217);
+}
+
+.type-fire {
+    background-color: red;
+}
+
+.type-water {
+    background-color: rgb(133, 191, 211);
+}
+
+.type-electric {
+    background-color: yellow;
+}
+
+.type-grass {
+    background-color: rgb(102, 206, 102);
+}
+
+.type-ice {
+    background-color: rgb(151, 248, 248);
+}
+
+.type-fighting {
+    background-color: rgb(128, 73, 73);
+}
+
+.type-poison {
+    background-color: rgb(195, 105, 231);
+}
+
+.type-ground {
+    background-color: rgb(204, 182, 154);
+}
+
+.type-flying {
+    background-color: rgb(200, 222, 241);
+}
+
+.type-psychic {
+    background-color: hotpink;
+}
+
+.type-bug {
+    background-color: rgb(152, 168, 95);
+}
+
+.type-rock {
+    background-color: rgb(179, 156, 156);
+}
+
+.type-ghost {
+    background-color: rgb(97, 53, 201);
+}
+
+.type-dragon {
+    background-color: rgb(143, 74, 233);
+}
+
+.type-dark {
+    background-color: rgb(90, 70, 52);
+}
+
+.type-steel {
+    background-color: rgb(182, 190, 196);
+}
+
+.type-fairy {
+    background-color: rgb(238, 168, 217);
 }
 
 @media (max-width: 1000px) {

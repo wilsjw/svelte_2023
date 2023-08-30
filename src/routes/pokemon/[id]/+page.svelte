@@ -1,0 +1,64 @@
+<script>
+    import { page } from '$app/stores'
+    import { onMount } from 'svelte';
+
+    let pokemon = {};
+    let types = [];
+    let abilities = [];
+    let sprites = {};
+    let stats = [];
+    let moves = [];
+
+    onMount(async () => {
+        await fetch(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`)
+        .then(res => res.json())
+        .then(data => {
+            pokemon = data;
+            types = data.types.map(t => t);
+            abilities = data.abilities.map(a => a);
+            sprites = data.sprites;
+            stats = data.stats.map(s => s);
+            moves = data.moves.map(m => m);
+        }).catch(error => {
+            console.log(error);
+            return [];
+        });
+    });
+</script>
+
+<div class="pokemon-page-main">
+    <div class="pokemon-page-info">
+        <img src={sprites.front_default} alt={pokemon.name}>
+        <div class="pokemon-page-info-text">
+            <h1>{pokemon.id < 10 ? `0${pokemon.id}` : pokemon.id} - {pokemon.name}</h1>
+            <p><b>types: </b>{#each types as t}<span class={`pokemon-type type-${t.type.name}`}>{t.type.name} </span>{/each}</p>
+            
+            <p><b>abilities:</b></p>
+            <ul>
+                {#each abilities as a}
+                    <li>{a.ability.name} <b>{a.is_hidden ? " - hidden"  : ""}</b></li>
+                {/each}
+            </ul>
+            <p><b>height:</b> {pokemon.height / 10}m <b>weight:</b> {pokemon.weight / 10}kg</p>
+        </div>
+    </div>
+    <div class="pokemon-page-stats">
+        <h2>stats</h2>
+        {#each stats as s}
+            <p><b>{s.stat.name}:</b> {s.base_stat}</p>
+        {/each}
+    </div>
+    <div class="pokemon-page-moves">
+        <h2>moves</h2>
+        <div class="pokemon-move-list">
+            {#each moves as m}
+                <div class="pokemon-move">
+                    {m.move.name}
+                </div>
+            {/each}
+        </div>
+    </div>
+    
+</div>
+
+
