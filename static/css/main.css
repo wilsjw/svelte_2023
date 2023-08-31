@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&family=Mukta:wght@800&family=Nanum+Gothic&display=swap');
 
+:root {
+    --main-background: #FAFAFA;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    background-color: #FAFAFA;
+    background-color: var(--main-background);
 }
 
 header {
@@ -34,12 +38,13 @@ header {
 nav {
     background-color: #FFE255;
     width: 100%;
-    padding: 2vh 4vh;
+    padding: 4.5vh 4vh;
     height: 55px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: absolute;
+    z-index: 100;
 }
 
 nav #links {
@@ -54,6 +59,14 @@ nav a {
     color: black;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: 1.8vh;
+}
+
+.spin {
+    transition: 400ms;
+}
+
+.spin:hover {
+    transform: rotate(360deg);
 }
 
 .main {
@@ -219,6 +232,22 @@ footer {
     text-decoration: underline 0.3vh black;
 }
 
+#loading-pokemon {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    height: 100vh;
+    top: 50px;
+    left: 0;
+    background: var(--main-background);
+}
+
+.loading-poke-content h1 {
+    font-size: 5em;
+}
+
 .pokemon-page-main {
     margin: auto;
     display: grid;
@@ -266,9 +295,6 @@ footer {
 
 .pokemon-page-moves {
     grid-column: span 2;
-}
-
-.pokemon-page-moves {
     flex-direction: column;
 }
 
@@ -301,6 +327,12 @@ footer {
     padding: 4px 6px;
     border-radius: 5px;
     margin-right: 3px;
+}
+
+.pokemon-missing {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 / 3;
 }
 
 .type-normal {
@@ -402,5 +434,35 @@ footer {
 
     header #menu-button {
         display: block;
+    }
+
+    .pokemon-page-main {
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .pokemon-page-main > * {
+        flex-direction: column;
+    }
+
+    .pokemon-move-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .pokemon-page-main {
+        padding: 40px 0;
+    }
+
+    .pokemon-page-info-text h1 {
+        font-size: 2.5em;
+    }
+
+    .pokemon-move-list {
+        padding: 0;
+        grid-template-columns: 1fr;
     }
 }
