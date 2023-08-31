@@ -12,6 +12,8 @@
     let totalPokemon = 0;
 
     onMount(async () => {
+        scrollPokeball();
+
         await fetch(currentUrl)
         .then(response => response.json())
         .then(data => {
@@ -34,12 +36,26 @@
             })
             .catch(error => console.log(error));
     }
+
+    function scrollPokeball() {
+        const pokeball = document.getElementById('pokeball');
+        const scroll = window.scrollY;
+
+        pokeball.style.transform = `rotate(${360 * scroll / window.innerHeight}deg)`;
+
+        requestAnimationFrame(scrollPokeball);
+    }
+
+    
 </script>
 
 <div class="main">
     <div id="top">
         <div id="index-title">
             <h1>Pokémon</h1>
+        </div>
+        <div id="pokeball">
+            <img src="images/pokeball.svg">
         </div>
     </div>
 

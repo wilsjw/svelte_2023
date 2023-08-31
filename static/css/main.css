@@ -11,6 +11,7 @@
 body {
     margin: 0;
     background-color: var(--main-background);
+    z-index: -10;
 }
 
 header {
@@ -36,7 +37,6 @@ header {
 }
 
 nav {
-    background-color: #FFE255;
     width: 100%;
     padding: 4.5vh 4vh;
     height: 55px;
@@ -66,60 +66,21 @@ nav a {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-#image-overlay {
-    display: none;
-    background-color: rgba(0, 0, 0, 0.9);
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
-
-#image-overlay #main img#focus-image {
-    width: 65vh;
-    height: 65vh;
-    transform: translate(calc(50vw - 32.5vh), calc(45vh - 32.5vh));
-    margin-bottom: 6vh;
-    padding: 1vh;
-    background-color: #FFF;
-    border: solid #F15045 1vh;
-}
-
-#image-overlay #main p#focus-title {
-    font: 3rem 'Mukta', sans-serif;
-    color: #FFF;
-    text-align: center;
-    text-transform: capitalize;
-}
-
-#image-overlay #close-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    width: 50px;
-    height: 50px;
-    font: bold 2rem 'Arial', 'Helvetica', sans-serif;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    color: #FFF;
-    transition: 50ms;
-}
-
-#image-overlay #close-button:hover,
-#image-overlay #close-button:focus {
-    font-size: 2.5rem;
-    color: #F00;
+    z-index: -1;
 }
 
 #top {
     width: 100%;
     height: 100vh;
     background-color: #FFE255;
-    display: grid;
-    place-items: center;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+
+#top #index-title {
+    z-index: 5;
 }
 
 #top h1 {
@@ -128,7 +89,23 @@ nav a {
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 0;
-    text-shadow: 0px 0px 5px #000;
+    text-shadow: 0px 0px 10px #000;
+}
+
+#pokeball {
+    z-index: 0;    
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pokeball img{
+    width: 500px;
 }
 
 #centre {
@@ -404,6 +381,10 @@ footer {
     #top h1 {
         font-size: 15vh;
     }
+
+    #pokeball img {
+        width: 300px;
+    }
 }
 
 @media (max-width: 860px) {
@@ -446,6 +427,10 @@ footer {
 }
 
 @media (max-width: 500px) {
+    .loading-poke-content h1 {
+        font-size: 2.5em;
+    }
+    
     .pokemon-page-main {
         padding: 40px 0;
     }
@@ -457,5 +442,9 @@ footer {
     .pokemon-move-list {
         padding: 0;
         grid-template-columns: 1fr;
+    }
+
+    #pokeball img {
+        width: 120px;
     }
 }
