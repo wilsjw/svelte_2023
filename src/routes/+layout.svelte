@@ -5,6 +5,7 @@
 
 <svelte:head>
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/all.css">
     <title>Pokémon</title>
 </svelte:head>
 
