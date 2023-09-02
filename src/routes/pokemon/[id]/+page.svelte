@@ -23,8 +23,6 @@
         await fetch(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`)
         .then(res => res.json())
         .then(data => {
-            console.log(data);
-
             pokemon = data;
             types = data.types.map(t => t);
             abilities = data.abilities.map(a => a);
