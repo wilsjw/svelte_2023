@@ -62,11 +62,11 @@ nav a {
 }
 
 .main {
+    width: 100%;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: -1;
 }
 
 #top {
@@ -105,14 +105,19 @@ nav a {
 }
 
 #pokeball img{
-    width: 500px;
+    width: 400px;
 }
 
 #centre {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 5vh;
+    width: 100%;
 }
 
-#centre h2 {
+h2#pokemon-title {
     font-size: 8vh;
     text-align: center;
     margin-bottom: 0;
@@ -126,45 +131,62 @@ nav a {
     padding: 3vh 0;
 }
 
-#centre #change-pokemon button {
+#change-pokemon button {
     font: bold 4vh 'Arial', sans-serif;
     width: 5vh;
     height: 5vh;
     background-color: #a81b1b;
-    border-radius: 1vh;
+    border-radius: 50%;
     border: none;
     transition: 100ms;
 }
 
-#centre #change-pokemon button:hover {
+#change-pokemon button:hover {
     background-color: #F15045;
-    border-radius: 50%;
+    border-radius: 1vh;
 }
 
-#centre .pokemon-grid {
+.pokemon-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    width: 90%;
+    margin: 0;
 }
 
-#centre .pokemon-grid .card {
-    display: grid;
-    place-items: center;
+.pokemon-grid a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
     background-color: #FFF;
     padding: 1vh;
+    width: 100%;
+    height: 30vw;
+    border: solid 1.5vh #FFE255;
+    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 100ms;
 }
 
-#centre .pokemon-grid .card a img {
-    margin: auto;
-    max-width: 100%;
+.card:hover {
+    transform: scale(1.05);
 }
 
-#centre .pokemon-grid > .card:nth-of-type(odd) {
-    border: solid 1.5vh #FF7155;
+.card-image {
+    height: 90%;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-#centre .pokemon-grid > .card:nth-of-type(even) {
-    border: solid 1.5vh #F15045;
+.card-info h2 {
+    height: 10%;
+    text-align: center;
+    margin: 0;
+    font: bold 3.5em 'Lora', serif;
 }
 
 .socials * {
@@ -377,13 +399,17 @@ footer {
     background-color: rgb(238, 168, 217);
 }
 
-@media (max-width: 1000px) {
-    #top h1 {
+@media (max-width: 1200px) {
+    #index-title h1 {
         font-size: 15vh;
     }
 
     #pokeball img {
-        width: 300px;
+        width: 300px
+    }
+
+    #centre {
+        padding: 0;
     }
 }
 
@@ -394,12 +420,16 @@ footer {
         text-orientation: upright;
     }
 
-    #centre .pokemon-grid {
+    .pokemon-grid {
         grid-template-columns: 1fr;
     }
 
-    #centre h2 {
+    h2#pokemon-title {
         font-size: 6vh;
+    }
+
+    .card-info h2 {
+        font-size: 2em;
     }
 
     header nav {
@@ -444,7 +474,11 @@ footer {
         grid-template-columns: 1fr;
     }
 
+    .card-info h2 {
+        font-size: 1em;
+    }
+
     #pokeball img {
-        width: 120px;
+        width: 160px;
     }
 }

@@ -6,7 +6,7 @@
     let focusTitle = "mew";
 
     let pokemon = [];
-    let currentUrl = "https://pokeapi.co/api/v2/pokemon";
+    let currentUrl = "https://pokeapi.co/api/v2/pokemon?limit=30";
     let prevUrl = "";
     let nextUrl = "";
     let totalPokemon = 0;
@@ -55,12 +55,12 @@
             <h1>Pokémon</h1>
         </div>
         <div id="pokeball">
-            <img src="images/pokeball.svg">
+            <img alt="pokeball" src="images/pokeball.svg">
         </div>
     </div>
 
     <div id="centre">
-        <h2>All Pokémon. Ever.</h2>
+        <h2 id="pokemon-title">All Pokémon. Ever.</h2>
         <div id="change-pokemon">
             <button on:click={() => updatePokemon(prevUrl)} id="prev-pokemon">{"<"}</button>
             <button on:click={() => updatePokemon(nextUrl)} id="next-pokemon">{">"}</button>
