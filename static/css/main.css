@@ -152,7 +152,7 @@ h2#pokemon-title {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     width: 90%;
-    margin: 0;
+    margin: 0 auto;
 }
 
 .pokemon-grid a {
@@ -422,7 +422,7 @@ footer {
     }
 
     .pokemon-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(3, 24vw);
     }
 
     h2#pokemon-title {
