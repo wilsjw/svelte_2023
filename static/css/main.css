@@ -2,7 +2,7 @@
 
 :root {
     --main-background: #FAFAFA;
-    --highlight: #FFE255;
+    --highlight: #FBEE95;
 }
 
 * {
@@ -159,7 +159,6 @@ h2#pokemon-title {
 .card {
     display: flex;
     flex-direction: column;
-    background-color: #FFF;
     position: relative;
     padding: 15px;
     width: 100%;
@@ -177,8 +176,9 @@ h2#pokemon-title {
     height: 100%;
     left: 0;
     top: 0;
-    background: var(--highlight);
+    background: linear-gradient(to bottom, var(--highlight), #F8DF95);
     z-index: 0;
+    border-radius: 10px;
 }
 
 .card-image {
@@ -192,7 +192,6 @@ h2#pokemon-title {
 }
 
 .card-info {
-    background-color: var(--highlight);
     height: 15%;
     display: flex;
     justify-content: center;
