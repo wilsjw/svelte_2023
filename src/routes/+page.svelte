@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import PokemonList from "../lib/PokemonList.svelte";
+    import PokemonList from "$lib/PokemonList.svelte";
 
     let focusImage = "images/home/mew.jpg";
     let focusTitle = "mew";
