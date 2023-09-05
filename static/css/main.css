@@ -2,7 +2,7 @@
 
 :root {
     --main-background: #FAFAFA;
-    --highlight: #FBEE95;
+    --highlight: #FDFD96;
 }
 
 * {
@@ -176,7 +176,7 @@ h2#pokemon-title {
     height: 100%;
     left: 0;
     top: 0;
-    background: linear-gradient(to bottom, var(--highlight), #F8DF95);
+    background: linear-gradient(to bottom, var(--highlight), #FFE99A);
     z-index: 0;
     border-radius: 10px;
 }
