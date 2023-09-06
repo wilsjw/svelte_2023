@@ -54,11 +54,9 @@ nav #links {
     justify-content: center;
 }
 
-nav a {
-    margin: 0 6vh;
-    text-decoration: none;
-    color: black;
-    font-family: 'Nanum Gothic', sans-serif;
+.nav-icons {
+    color: #FFF;
+    text-shadow: 1px 1px 3px black;
     font-size: 1.8vh;
 }
 
@@ -202,7 +200,7 @@ h2#pokemon-title {
 .card-info h2 {
     text-align: center;
     margin: 0;
-    font: bold 3em 'Lora', serif;
+    font: 3em 'Baskerville', serif;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -322,14 +320,7 @@ footer {
     align-items: center;
     padding: 30px;
     font: bold 1em sans-serif;
-}
-
-.pokemon-move:nth-of-type(odd) {
-    background-color: orange;
-}
-
-.pokemon-move:nth-of-type(even) {
-    background-color: orangered;
+    background-color: var(--highlight);
 }
 
 .pokemon-type {
