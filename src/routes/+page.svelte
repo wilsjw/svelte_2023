@@ -2,28 +2,11 @@
     import { onMount } from "svelte";
     import PokemonList from "$lib/PokemonList.svelte";
 
-    let focusImage = "images/home/mew.jpg";
-    let focusTitle = "mew";
-
     let pokemon = [];
     let currentUrl = "https://pokeapi.co/api/v2/pokemon?limit=30";
     let prevUrl = "";
     let nextUrl = "";
     let totalPokemon = 0;
-
-    onMount(async () => {
-        scrollPokeball();
-
-        await fetch(currentUrl)
-        .then(response => response.json())
-        .then(data => {
-            pokemon = data.results.map(p => p.name);
-            nextUrl = data.next;
-            prevUrl = data.previous;
-            totalPokemon = data.count;
-        })
-        .catch(error => console.log(error));
-    });
 
     async function updatePokemon(urlToUse) {
         await fetch(urlToUse)
@@ -36,6 +19,12 @@
             })
             .catch(error => console.log(error));
     }
+
+    onMount(async () => {
+        scrollPokeball();
+
+        await updatePokemon(currentUrl);
+    });
 
     function scrollPokeball() {
         const pokeball = document.getElementById('pokeball');
