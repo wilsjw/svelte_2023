@@ -24,11 +24,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+[![Product Name Screen Shot][product-screenshot]](resources/homepage.png)
 
 
 
@@ -55,12 +51,13 @@ To access the project, first, clone the repository to gain access to the source 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This project is my personal spin on a Pokémon Encyclopedia, or simply a Pokédex.
+This project is my personal spin on a Pokémon Encyclopedia, or simply Pokédex.
 
-<!-- Gallery image here -->
+![](resources/gallery.png)
 On the main page there is a gallery of 30 Pokémon cards which can be shifted using left and right arrow buttons. 
 
-<!-- Pokédex entry image here -->
+
+![](resources/pokedex-entry.png)
 Each of these Pokémon cards, when clicked, leads to its own Pokédex entry to display more in-depth information about said Pokémon.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
