@@ -8,16 +8,29 @@
     let nextUrl = "";
     let totalPokemon = 0;
 
-    async function updatePokemon(urlToUse) {
-        await fetch(urlToUse)
-            .then(response => response.json())
-            .then(data => {
-                pokemon = data.results.map(p => p.name);
-                nextUrl = data.next;
-                prevUrl = data.previous;
-                totalPokemon = data.count;
-            })
-            .catch(error => console.log(error));
+    const updatePokemon = async (url) => {
+        try {
+            const res = await fetch(url);
+            const data = await res.json();
+
+            pokemon = data.results.map(p => p.name);
+            nextUrl = data.next;
+            prevUrl = data.previous;
+            totalPokemon = data.count;
+        } catch (error) {
+            console.log(error);
+        }
+        
+        /* Old fetch, new is easier to read and manipulate */
+        // await fetch(urlToUse)
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         pokemon = data.results.map(p => p.name);
+        //         nextUrl = data.next;
+        //         prevUrl = data.previous;
+        //         totalPokemon = data.count;
+        //     })
+        //     .catch(error => console.log(error));
     }
 
     onMount(async () => {
@@ -26,7 +39,7 @@
         await updatePokemon(currentUrl);
     });
 
-    function scrollPokeball() {
+    const scrollPokeball = () => {
         const pokeball = document.getElementById('pokeball');
         const scroll = window.scrollY;
 
