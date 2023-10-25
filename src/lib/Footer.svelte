@@ -1,28 +1,12 @@
+<script>
+  import SocialLinks from "./SocialLinks.svelte";
+
+</script>
 <footer>
     <ul class="socials">
-        <li id="yt">
-            <img id="yt-icon" alt="YT icon" src="/images/youtube.png">
-            <a href="https://www.youtube.com/@ashures_" target="_blank" class="fancy-underline">
-                <p>YouTube</p>
-            </a>
-        </li>
-        <li id="twitter">
-            <img id="twitter-icon" alt="Twitter icon" src="/images/twitter.png">
-            <a href="https://www.twitter.com/ashures_" target="_blank" class="fancy-underline">
-                <p>Twitter</p>
-            </a>
-        </li>
-        <li id="twitch">
-            <img id="twitch-icon" alt="YT icon" src="/images/twitch.png">
-            <a href="https://www.twitch.com/ashuress" target="_blank" class="fancy-underline">
-                <p>Twitch</p>
-            </a>
-        </li>
-        <li id="games">
-            <img id="games-icon" alt="YT icon" src="/images/games.png">
-            <a href="https://ashures.w3spaces.com/" target="_blank" class="fancy-underline">
-                <p>Games</p>
-            </a>
-        </li>
+        <SocialLinks title="YouTube" link="https://www.youtube.com/@ashures_" img="/images/youtube.png" />
+        <SocialLinks title="Twitter" link="https://www.twitter.com/ashures_" img="/images/twitter.png" />
+        <SocialLinks title="Twitch" link="https://www.twitch.com/ashuress" img="/images/twitch.png" />
+        <SocialLinks title="Games" link="https://ashures.w3spaces.com/" img="/images/games.png" />
     </ul>
 </footer>
