@@ -15,11 +15,11 @@
             const data = await res.json();
 
             pokemon = data;
-            types = data.types.map(t => t);
-            abilities = data.abilities.map(a => a);
+            types = data.types;
+            abilities = data.abilities;
             sprites = data.sprites;
-            stats = data.stats.map(s => s);
-            moves = data.moves.map(m => m);
+            stats = data.stats;
+            moves = data.moves;
         } catch (error) {
             console.log(error);
         }
