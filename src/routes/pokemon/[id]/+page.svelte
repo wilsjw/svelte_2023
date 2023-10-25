@@ -10,18 +10,33 @@
     let moves = [];
 
     onMount(async () => {
-        await fetch(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`)
-        .then(res => res.json())
-        .then(data => {
+        try {
+            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`);
+            const data = await res.json();
+
             pokemon = data;
             types = data.types.map(t => t);
             abilities = data.abilities.map(a => a);
             sprites = data.sprites;
             stats = data.stats.map(s => s);
             moves = data.moves.map(m => m);
-        }).catch(error => {
+        } catch (error) {
             console.log(error);
-        });
+        }
+        
+
+        // await fetch(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`)
+        // .then(res => res.json())
+        // .then(data => {
+        //     pokemon = data;
+        //     types = data.types.map(t => t);
+        //     abilities = data.abilities.map(a => a);
+        //     sprites = data.sprites;
+        //     stats = data.stats.map(s => s);
+        //     moves = data.moves.map(m => m);
+        // }).catch(error => {
+        //     console.log(error);
+        // });
     });
 </script>
 
