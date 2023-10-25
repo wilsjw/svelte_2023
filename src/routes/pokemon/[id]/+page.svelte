@@ -2,6 +2,8 @@
     import { page } from '$app/stores'
     import { onMount } from 'svelte';
 
+    let loading = true;
+
     let pokemon = {};
     let types = [];
     let abilities = [];
@@ -24,6 +26,7 @@
             console.log(error);
         }
         
+        loading = false;
 
         // await fetch(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`)
         // .then(res => res.json())
@@ -40,7 +43,7 @@
     });
 </script>
 
-{#if JSON.stringify(pokemon) === "{}"}
+{#if loading}
     <div id="loading-pokemon">
         <div class="loading-poke-content">
             <h1 id="loading-header">Loading...</h1>
