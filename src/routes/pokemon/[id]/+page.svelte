@@ -11,7 +11,10 @@
     let stats = [];
     let moves = [];
 
+    // Run once the page has connected to the browser
     onMount(async () => {
+        // The following code requests information from the PokeAPI website using the pokemon name/id as the query. 
+        // This is taken from the page parameters that the user can type manually or from the Pokemon cards.
         try {
             const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`);
             const data = await res.json();
@@ -43,6 +46,10 @@
     });
 </script>
 
+<!-- 
+    Using the loading variable, waits for the fetch call above to return potential data.
+    Whilst the data is loading, a loading symbol is displayed to show the user the page is still working
+-->
 {#if loading}
     <div id="loading-pokemon">
         <div class="loading-poke-content">
@@ -52,6 +59,7 @@
 {:else}
     <div class="pokemon-page-main">
         {#if JSON.stringify(pokemon) !== '{}'}
+            <!-- If the data exists it is displayed using the HTML beneath -->
             <div class="pokemon-page-info">
                 <img src={sprites.front_default} alt={pokemon.name}>
                 <div class="pokemon-page-info-text">
