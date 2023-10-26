@@ -59,6 +59,20 @@ Each of these Pokémon cards, when clicked, leads to its own Pokédex entry to d
 
 
 
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Region based Pokédex (individual games)
+- [ ] Type chart with attack and defense comparison
+    - [ ] Expanded pages for each move attack and defense pros/cons
+        - [ ] List of Pokémon that has the type selected
+- [ ] List of all Pokémon moves
+    - [ ] Expanded pages for each move by name/id
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
 <!-- CONTACT -->
 ## Contact
 
