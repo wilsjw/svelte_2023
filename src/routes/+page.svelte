@@ -1,6 +1,6 @@
 <script>
     import { onMount } from "svelte";
-    import PokemonList from "$lib/PokemonList.svelte";
+    import PokemonList from "$lib/components/PokemonList.svelte";
 
     let pokemon = [];
     let currentUrl = "https://pokeapi.co/api/v2/pokemon?limit=30";

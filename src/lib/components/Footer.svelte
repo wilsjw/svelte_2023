@@ -1,5 +1,5 @@
 <script>
-  import SocialLink from "./SocialLink.svelte";
+  import SocialLink from "$lib/components/SocialLink.svelte";
 
 </script>
 <footer>

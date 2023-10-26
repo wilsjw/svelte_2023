@@ -1,5 +1,5 @@
 <script>
-    import PokemonCard from "./PokemonCard.svelte";
+    import PokemonCard from "$lib/components/PokemonCard.svelte";
 
     export let pokemon;
 
