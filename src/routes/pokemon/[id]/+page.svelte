@@ -1,6 +1,7 @@
 <script>
     import { page } from '$app/stores'
     import { onMount } from 'svelte';
+    import getAPI from "$lib/utils/getAPI.js";
 
     let loading = true;
 
@@ -15,19 +16,15 @@
     onMount(async () => {
         // The following code requests information from the PokeAPI website using the pokemon name/id as the query. 
         // This is taken from the page parameters that the user can type manually or from the Pokemon cards.
-        try {
-            const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`);
-            const data = await res.json();
 
-            pokemon = data;
-            types = data.types;
-            abilities = data.abilities;
-            sprites = data.sprites;
-            stats = data.stats;
-            moves = data.moves;
-        } catch (error) {
-            console.log(error);
-        }
+        const data = await getAPI(`https://pokeapi.co/api/v2/pokemon/${$page.params.id}/`);
+
+        pokemon = data;
+        types = data.types;
+        abilities = data.abilities;
+        sprites = data.sprites;
+        stats = data.stats;
+        moves = data.moves;
         
         loading = false;
 
