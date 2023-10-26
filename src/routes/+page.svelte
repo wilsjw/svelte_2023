@@ -39,13 +39,15 @@
         await updatePokemon(currentUrl);
     });
 
+    // Rotates a Pokeball on the landing page by the scroll amount
     const scrollPokeball = () => {
         const pokeball = document.getElementById('pokeball');
         const scroll = window.scrollY;
 
         pokeball.style.transform = `rotate(${360 * scroll / window.innerHeight}deg)`;
 
-        requestAnimationFrame(scrollPokeball);
+        // Requests the browser to run this whenever there is enough spare resources available instead of slowing down the site
+        requestAnimationFrame(scrollPokeball); 
     }
 
     
@@ -63,6 +65,7 @@
 
     <div id="centre">
         <h2 id="pokemon-title">All Pokémon. Ever.</h2>
+        <!-- Allows page changing using the URLs obtained in the previous fetch to update the Pokemon -->
         <div id="change-pokemon">
             <button on:click={() => updatePokemon(prevUrl)} id="prev-pokemon">{"<"}</button>
             <button on:click={() => updatePokemon(nextUrl)} id="next-pokemon">{">"}</button>
