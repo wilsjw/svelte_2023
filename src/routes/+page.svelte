@@ -1,5 +1,6 @@
 <script>
     import { onMount } from "svelte";
+    import getAPI from "$lib/utils/getAPI.js";
     import PokemonList from "$lib/components/PokemonList.svelte";
 
     let pokemon = [];
@@ -9,17 +10,13 @@
     let totalPokemon = 0;
 
     const updatePokemon = async (url) => {
-        try {
-            const res = await fetch(url);
-            const data = await res.json();
+        
+        const data = await getAPI(url);
 
-            pokemon = data.results.map(p => p.name);
-            nextUrl = data.next;
-            prevUrl = data.previous;
-            totalPokemon = data.count;
-        } catch (error) {
-            console.log(error);
-        }
+        pokemon = data.results.map(p => p.name);
+        nextUrl = data.next;
+        prevUrl = data.previous;
+        totalPokemon = data.count;
         
         /* Old fetch, new is easier to read and manipulate */
         // await fetch(urlToUse)
