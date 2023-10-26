@@ -10,7 +10,9 @@
     </li>
     <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -79,6 +81,17 @@ Each of these Pokémon cards, when clicked, leads to its own Pokédex entry to d
 John Wilson - wilsjw2@student.op.ac.nz
 
 Project Link: [https://github.com/wilsjw/svelte_2023](https://github.com/wilsjw/svelte_2023)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## Acknowledgments
+
+* [https://pokeapi.co](https://pokeapi.co) PokéAPI for all Pokémon related assets/information
+* [https://pokemondb.net](https://pokemondb.net) PokémonDB for the Pokémon types styles
+* [https://jasonxu.me](https://jasonxu.me) Jason Xu for inspiration on scroll effects, e.g., the spinning Pokeball
+* [https://hearthstone.blizzard.com/en-us/cards](https://hearthstone.blizzard.com/en-us/cards) Blizzard for the cards and hover effects
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
